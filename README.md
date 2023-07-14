@@ -14,6 +14,8 @@ To set up the project, follow these steps:
  npm install pg
  npm install dotenv
  npm install express
+ npm install express-async-handler
+ npm install morgan
 ```
 3) Create a copy of the example.env file and rename it to .env. Then, populate the .env file with your unique PostgreSQL database information. Default password is usually ''
 
