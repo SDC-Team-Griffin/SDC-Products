@@ -26,7 +26,7 @@ const loadDBTables = async () => {
       port: process.env.DB_PORT
     });
 
-    const sqlScript = fs.readFileSync('database/SQL-Schema-products.sql', 'utf-8');
+    const sqlScript = fs.readFileSync('database/schema/SQL-Schema-products.sql', 'utf-8');
     await sdcPool.query(sqlScript);
     await sdcPool.end(); // Close the connection to the 'sdc_products' database
 

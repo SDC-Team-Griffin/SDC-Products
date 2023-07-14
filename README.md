@@ -13,6 +13,7 @@ To set up the project, follow these steps:
 ```shell
  npm install pg
  npm install dotenv
+ npm install express
 ```
 3) Create a copy of the example.env file and rename it to .env. Then, populate the .env file with your unique PostgreSQL database information. Default password is usually ''
 

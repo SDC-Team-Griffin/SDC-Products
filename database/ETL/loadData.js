@@ -26,7 +26,7 @@ const loadData = async () => {
     const skusCSVFilePath = path.join(__dirname, '..', 'CSV-data', 'skus.csv');
     const relatedCSVFilePath = path.join(__dirname, '..', 'CSV-data', 'related.csv');
 
-    const sqlScript = fs.readFileSync('ETL/postgreSQL-ETL.sql', 'utf-8');
+    const sqlScript = fs.readFileSync('database/ETL/postgreSQL-ETL.sql', 'utf-8');
     const formattedSqlScript = sqlScript
       .replace('$productsCSVFilePath', productsCSVFilePath)
       .replace('$featuresCSVFilePath', featuresCSVFilePath)
