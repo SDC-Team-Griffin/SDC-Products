@@ -37,5 +37,4 @@ To seed the database and load CSV data into the database, run the following comm
 - related_products: 4508205
 
 
-###End
-- Thank you
+### End
