@@ -1,7 +1,7 @@
 {
   "name": "sdc-products",
   "version": "1.0.0",
-  "description": "",
+  "description": "This repository contains the code for the SDC-Products project, which includes a Node.js server and database files for PostgreSQL.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
