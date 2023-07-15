@@ -3,17 +3,17 @@ const db = require('../database/db.js');
 module.exports = {
 
   loadDefaultProduct: () => {
-    console.log('got into get default product');
+    // console.log('got into get default product');
     return db.query('SELECT * FROM products ORDER BY product_id LIMIT 1;')
   },
 
   loadProducts: (limit) => {
-    console.log('got into get products');
+    // console.log('got into get products');
     return db.query(`SELECT * FROM products LIMIT ${limit};`)
   },
 
   loadSpecificProduct: (product_id) => {
-    console.log('got into get specific product');
+    // console.log('got into get specific product');
     return db.query(`
       SELECT
       p.*,
@@ -30,7 +30,7 @@ module.exports = {
   },
 
   loadProductStyles: (product_id) => {
-    console.log('got into get product styles');
+    // console.log('got into get product styles');
     return db.query(`
       SELECT
       st.*,
@@ -58,7 +58,7 @@ module.exports = {
   },
 
   loadRelatedProducts: (product_id) => {
-    console.log('got into get related products');
+    // console.log('got into get related products');
     return db.query(`SELECT * FROM related_products WHERE current_product_id = ${product_id}`)
   }
 
