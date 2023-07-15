@@ -3,7 +3,8 @@ const productsModel = require('../models/productsModel.js');
 module.exports = {
 
   getProducts: ( function (req, res) {
-    productsModel.loadProducts()
+    const limit = req.query.limit || null;
+    productsModel.loadProducts(limit)
     .then((products) => {
       var productRows = products.rows;
       console.log("products", productRows);
@@ -71,4 +72,6 @@ module.exports = {
   })
 
   }
+
+
 

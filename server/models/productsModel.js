@@ -7,12 +7,12 @@ module.exports = {
     return db.query('SELECT * FROM products ORDER BY product_id LIMIT 1;')
   },
 
-  loadProducts: () => {
+  loadProducts: (limit) => {
     console.log('got into get products');
-    return db.query('SELECT * FROM products;')
+    return db.query(`SELECT * FROM products LIMIT ${limit};`)
   },
 
-  loadSpecificProduct: (product_id) => { // SELECT * FROM products features WHERE product_id = ${product_id}`
+  loadSpecificProduct: (product_id) => {
     console.log('got into get specific product');
     return db.query(`
       SELECT

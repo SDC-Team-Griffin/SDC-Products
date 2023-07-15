@@ -16,6 +16,14 @@ To set up the project, follow these steps:
  npm install express
  npm install express-async-handler
  npm install morgan
+
+
+
+ npm install --save-dev jest
+ jest --init
+ npm install --save-dev babel-jest @babel/core @babel/preset-env
+ npm install supertest --save-dev
+
 ```
 3) Create a copy of the example.env file and rename it to .env. Then, populate the .env file with your unique PostgreSQL database information. Default password is usually ''
 
