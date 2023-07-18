@@ -37,7 +37,7 @@ function getProducts() {
   customErrorRate.add(response.status !== 200);
 }
 
-function getProductById() {
+function getProductById(id) {
   const url = `http://localhost:3001/products/${id}`;
   const response = http.get(url);
   sleep(1);
@@ -47,7 +47,7 @@ function getProductById() {
   customErrorRate.add(response.status !== 200);
 }
 
-function getProductStyles() {
+function getProductStyles(id) {
   const url = `http://localhost:3001/products/${id}/styles`;
   const response = http.get(url);
 
@@ -58,7 +58,7 @@ function getProductStyles() {
   customErrorRate.add(response.status !== 200);
 }
 
-function getRelatedProducts() {
+function getRelatedProducts(id) {
   const url = `http://localhost:3001/products/${id}/related`
   const response = http.get(url);
 
@@ -72,7 +72,7 @@ function getRelatedProducts() {
 export default function () {
   // Run the stress test for each API endpoint
   getProducts();
-  getProductById();
-  getProductStyles();
-  getRelatedProducts();
+  getProductById(id);
+  getProductStyles(id);
+  getRelatedProducts(id);
 }
