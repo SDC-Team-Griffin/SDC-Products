@@ -1,3 +1,7 @@
+-- Manually load the following sql commands into database from this schema from main sdc-products directory
+-- psql -U darienpoon -d sdc_products -f /database/adding-indexing.sql;
+
+
 -- Index for products table
 CREATE INDEX product_id_index ON products (product_id);
 

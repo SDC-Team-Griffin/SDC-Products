@@ -28,7 +28,7 @@ export const options = {
 function getProducts() {
   const url = `http://localhost:3001/products`;
   const response = http.get(url);
-  // You can add additional assertions or checks on the response if needed
+
   sleep(1);
 
   // Record custom metrics for each API call
