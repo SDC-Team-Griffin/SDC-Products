@@ -16,6 +16,7 @@ To set up the project, follow these steps:
  npm install express
  npm install express-async-handler
  npm install morgan
+ npm install cors
 
 
 
@@ -23,6 +24,11 @@ To set up the project, follow these steps:
  jest --init
  npm install --save-dev babel-jest @babel/core @babel/preset-env
  npm install supertest --save-dev
+
+
+brew install k6
+npm install -g k6
+npm install @babel/cli @babel/core @babel/node --save-dev
 
 ```
 3) Create a copy of the example.env file and rename it to .env. Then, populate the .env file with your unique PostgreSQL database information. Default password is usually ''

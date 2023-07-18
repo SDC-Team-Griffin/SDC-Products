@@ -2,18 +2,22 @@ const productsModel = require('../models/productsModel.js');
 
 module.exports = {
 
-  getProducts: ( function (req, res) {
-    const limit = req.query.limit || null;
-    productsModel.loadProducts(limit)
-    .then((products) => {
-      var productRows = products.rows;
-      console.log("products", productRows);
-      res.status(200).send(productRows)
-    })
-    .catch((err) => {
-      console.error('Error loading products:', err)
-      res.status(500).send('Internal Server Error');
-    })
+  getProducts: (function (req, res) {
+    const limit = req.query.limit || 10; // Default limit to 10 if not provided
+    const page = req.query.page || 1;   // Default page to 1 if not provided
+    const offset = (page - 1) * limit;  // Calculate the offset based on the page and limit
+
+    productsModel
+      .loadProducts(limit, offset)
+      .then((products) => {
+        var productRows = products.rows;
+        console.log("products", productRows);
+        res.status(200).send(productRows);
+      })
+      .catch((err) => {
+        console.error('Error loading products:', err);
+        res.status(500).send('Internal Server Error');
+      });
   }),
 
   getDefaultProduct : ( function (req, res) {
